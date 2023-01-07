@@ -12,8 +12,8 @@ console.log(currentDate)
 
 const currentTime = dayjs().hour()
 
+//I wonder if this can be made with a loop too..
 let workDay = [
-  "8",
   "9",
   "10",
   "11",
@@ -49,7 +49,18 @@ for (i=0; i < workDay.length; i++) {
 
 
 
-  hourListChild.text(workDay[i])
+  //Converts 24 hour clock to 12 hour
+  hourListChild.text(workDay[i]+":00")
+  
+  if (workDay[i] < 12 ) {
+    hourListChild.text(workDay[i]+":00 am")
+  } else if (workDay[i] >= 13) {
+    let convertTime = (workDay[i]-12);
+    hourListChild.text(convertTime+":00 pm")
+  } else if (workDay[i] >= 12 ) {
+    hourListChild.text(workDay[i]+":00 pm")
+  } 
+
   hourListChild.addClass('col-2 col-md-1 hour text-center py-3')
 
   hourListTextArea.addClass('col-8 col-md-10 description')
@@ -71,18 +82,35 @@ for (i=0; i < workDay.length; i++) {
 }
 
 
-
 $(document).ready (function () {
 
-  $('.fa-save').on("click", function(e){
-    
+  $('.saveBtn').on("click", function(e){
+    let userInput = $(this).siblings(".textInput").val();
+    let timeBlock = $(this).siblings(".textInput").attr("id");
+
+
     console.log("fa-sav clicked")
-
-    //attempting to capture users textInput and print to console. then I can send to local storage
-    let userInput = $('.textInput').val()
     console.log(userInput)
+    console.log(timeBlock)
 
-  })
+    localStorage.setItem(timeBlock, userInput);
+
+
+
+  });
+  
+  //I wonder if this can be put in a loop
+  $("#hour-9").text(localStorage.getItem("hour-9"))
+  $("#hour-10").text(localStorage.getItem("hour-10"))
+  $("#hour-11").text(localStorage.getItem("hour-11"))
+  $("#hour-12").text(localStorage.getItem("hour-12"))
+  $("#hour-13").text(localStorage.getItem("hour-13"))
+  $("#hour-14").text(localStorage.getItem("hour-14"))
+  $("#hour-15").text(localStorage.getItem("hour-15"))
+  $("#hour-16").text(localStorage.getItem("hour-16"))
+  $("#hour-17").text(localStorage.getItem("hour-17"))
+  
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -105,6 +133,6 @@ $(document).ready (function () {
 });
 
 
-console.log(currentTime)
+console.log("The Current time is "+currentTime)
 
 
