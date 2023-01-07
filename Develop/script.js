@@ -36,7 +36,8 @@ for (i=0; i < workDay.length; i++) {
   //Classes and Text Content
   //hourListDiv.text(workDay[i])
   hourListDiv.addClass('row time-block past')
-  hourListDiv.attr('id', workDay[i])
+  hourListTextArea.attr('id', 'hour-'+ workDay[i])
+  hourListTextArea.addClass('textInput')
 
   if (workDay[i] == currentTime) {
     hourListDiv.addClass('row time-block present')
@@ -73,12 +74,12 @@ for (i=0; i < workDay.length; i++) {
 
 $(document).ready (function () {
 
-  $('.fa-save').on("click", function(){
-
+  $('.fa-save').on("click", function(e){
+    
     console.log("fa-sav clicked")
 
-    let userInput = $('<textarea>').siblings('.description').val();
-
+    //attempting to capture users textInput and print to console. then I can send to local storage
+    let userInput = $('.textInput').val()
     console.log(userInput)
 
   })
