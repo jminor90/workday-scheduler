@@ -2,13 +2,15 @@
 
 ## Description
 
-A simple work-day scheduler that utilizes jQuery, DayJS, and Bootstrap. Input is saved in local storage. This allows one to build a schedule to keep track of a busy work day.
+A simple work-day scheduler that utilizes jQuery, DayJS, and Bootstrap. Input is saved in local storage. 
+This allows one to build a schedule to keep track of a busy work day.
 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-When the page loads a set of times is given. If the time is in the past it will be colored gray, if it's within the current hour the block will be colored red, and time in the future will be colored green.
+When the page loads a set of times is given. If the time is in the past it will be colored gray.
+If it's within the current hour the block will be colored red, and time in the future will be colored green.
+
 Text can be entered into the empty field and when the blue save button is clicked the input will be saved in local storage.
 Even if the user refreshes the text that was input and saved will still appear in the correct time field.
 
