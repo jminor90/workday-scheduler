@@ -8,20 +8,31 @@ A simple work-day scheduler that utilizes jQuery, DayJS, and Bootstrap. Input is
 ## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
+When the page loads a set of times is given. If the time is in the past it will be colored gray, if it's within the current hour the block will be colored red, and time in the future will be colored green.
+Text can be entered into the empty field and when the blue save button is clicked the input will be saved in local storage.
+Even if the user refreshes the text that was input and saved will still appear in the correct time field.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screenshot of the application](Assets/Images/screenshot.png)
+[Click Here to Open Application](https://jminor90.github.io/workday-scheduler/)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Major edits to code by Joshua Minor
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+[Starter Code Cloned from Coding-Bootcamp Repo](https://github.com/coding-boot-camp/crispy-octo-meme)
 
-If you followed tutorials, include links to those here as well.
+[jQuery](https://jquery.com/)
+
+[DayJS](https://day.js.org/)
+
+[jQuery UI](https://jqueryui.com/)
+
+[BootStrap](https://getbootstrap.com/)
+
+[StackOverflow](https://stackoverflow.com/)
+
+
 
 ## License
 
