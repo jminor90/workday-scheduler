@@ -8,11 +8,11 @@ This allows one to build a schedule to keep track of a busy work day.
 
 ## Usage
 
-When the page loads a set of times is given. If the time is in the past it will be colored gray.
+When the page loads, the current date is shown, and a set of times is given. If the time is in the past it will be colored gray.
 If it's within the current hour the block will be colored red, and time in the future will be colored green.
 
-Text can be entered into the empty field and when the blue save button is clicked the input will be saved in local storage.
-Even if the user refreshes the text that was input and saved will still appear in the correct time field.
+When the user clicks on a box, text can be entered into the empty field. When the blue save button is clicked the input will be saved in local storage.
+Even if the user refreshes the page the text that was input will still appear in the correct time field.
 
 
 ![Screenshot of the application](Assets/Images/screenshot.png)
